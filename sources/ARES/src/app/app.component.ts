@@ -43,7 +43,7 @@ export class MyApp {
     { title: 'Contacts', component: 'ListMasterPage' },
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Settings', component: 'SettingsPage' },
-    { title: 'Search', component: 'SearchPage' },
+    { title: 'Votre avis', component: 'SearchPage' },
     { title: 'Géolocalisation', component: 'GeoPage'},
   ]
 

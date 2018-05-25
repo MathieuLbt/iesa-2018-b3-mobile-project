@@ -8,15 +8,17 @@
 
 
 <ion-content>
-  <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
-  <ion-list>
-    <button ion-item (click)="openItem(item)" *ngFor="let item of currentItems">
-      <ion-avatar item-start>
-        <img [src]="item.profilePic" />
-      </ion-avatar>
-      <h2>{{item.name}}</h2>
-      <p>{{item.about}}</p>
-      <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
-    </button>
-  </ion-list>
+  <form>
+    <label class="item item-input">
+      <span class="input-label">Titre</span>
+      <input type="text" placeholder="titre">
+    </label>
+    <label class="item itemp-input">
+      <span class="input-label">Votre message</span>
+      <input type="text" placeholder="Votre message">
+    </label>
+    <label class="item">
+      <button class="button button-block button-positive"
+    </label>
+  </form>
 </ion-content>
