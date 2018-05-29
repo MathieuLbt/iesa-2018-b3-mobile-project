@@ -1,56 +1,67 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Geolocation } from '@ionic-native/geolocation';
-import { Platform } from 'ionic-angular';
+import { Component, ViewChild, ElementRef, OnInit } from "@angular/core";
+import { IonicPage, NavController, NavParams, Platform } from "ionic-angular";
+import { Geolocation } from "@ionic-native/geolocation";
 
 /**
- * Generated class for the GeoPage page.
+ * Generated class for the SiteMapPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
 
+declare const google: any;
+
 @IonicPage()
 @Component({
-  selector: 'page-geo',
-  templateUrl: 'geo.html',
+  selector: "page-geo",
+  templateUrl: "geo.html"
 })
-export class GeoPage {
-  private lat: number;
-  private lng: number;
+export class GeoPage implements OnInit {
+  @ViewChild("map") mapElement: ElementRef;
+  map: any;
+
+  lat: number;
+  lng: number;
+
+  userLocation: any;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private platform: Platform,
     private geolocation: Geolocation,
-   ) {
-    platform.ready().then(() => {
+    public platform: Platform
+  ) {}
 
-      geolocation.getCurrentPosition().then(geoPosition => {
-        this.lat = geoPosition.coords.latitude;
-        this.lng = geoPosition.coords.longitude;
-        console.log('lat: ' + geoPosition.coords.latitude + ', lon: ' + geoPosition.coords.longitude);
-      }).catch((e) => console.log(e));
-
-      /*
-      const watch = geolocation.watchPosition().subscribe(pos => {
-        console.log('lat: ' + pos.coords.latitude + ', lon: ' + pos.coords.longitude);
+  ngOnInit() {
+    this.getUserLocation().then(() => {
+      this.platform.ready().then(() => {
+        this.initMap();
       });
-
-      // to stop watching
-      watch.unsubscribe();*/
-
     });
-
-
-
   }
 
+  initMap() {
+    this.map = new google.maps.Map(this.mapElement.nativeElement, {
+      zoom: 30,
+      center: this.userLocation
+    });
+  }
 
+  async getUserLocation() {
+    await this.geolocation
+      .getCurrentPosition({ enableHighAccuracy: true })
+      .then(resp => {
+        this.userLocation = new google.maps.LatLng(resp.coords.latitude, resp.coords.longitude);
+        this.lat = resp.coords.latitude;
+        this.lng =resp.coords.longitude;
+      })
+      .catch(error => {
+        console.log("Erreur", error);
+      });
 
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad GeoPage');
-
-  }}
+    let watch = this.geolocation.watchPosition();
+    watch.subscribe(data => {
+      //
+    });
+  }
+}

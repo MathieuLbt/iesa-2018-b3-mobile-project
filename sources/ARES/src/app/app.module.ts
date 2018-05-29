@@ -16,6 +16,7 @@ import { GeoPageModule } from '../pages/geo/geo.module';
 import { SatisfactionPageModule } from '../pages/satisfaction/satisfaction.module';
 import { Geolocation } from '@ionic-native/geolocation';
 import {EmailComposer} from "@ionic-native/email-composer";
+import { GoogleMaps } from '@ionic-native/google-maps';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -70,6 +71,7 @@ export function provideSettings(storage: Storage) {
     StatusBar,
     EmailComposer,
     Geolocation,
+    GoogleMaps,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler }
