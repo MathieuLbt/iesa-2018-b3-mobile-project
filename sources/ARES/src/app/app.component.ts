@@ -3,8 +3,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { TranslateService } from '@ngx-translate/core';
 import { Config, Nav, Platform } from 'ionic-angular';
-import { GeoPage } from '../pages/geo/geo';
-import { SatisfactionPage } from '../pages/satisfaction/satisfaction';
+// import { GeoPage } from '../pages/geo/geo';
+// import { SatisfactionPage } from '../pages/satisfaction/satisfaction';
+// import { CameraPage } from '../pages/camera/camera';
 
 import { FirstRunPage } from '../pages';
 import { Settings } from '../providers';
@@ -18,19 +19,20 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
-    { title: 'Tutorial', component: 'TutorialPage' },
+    // { title: 'Tutorial', component: 'TutorialPage' },
     { title: 'Welcome', component: 'WelcomePage' },
-    { title: 'Tabs', component: 'TabsPage' },
-    { title: 'Cards', component: 'CardsPage' },
-    { title: 'Maps', component: 'ContentPage' },
-    { title: 'Login', component: 'LoginPage' },
-    { title: 'Signup', component: 'SignupPage' },
+    // { title: 'Tabs', component: 'TabsPage' },
+    // { title: 'Cards', component: 'CardsPage' },
+    // { title: 'Maps', component: 'ContentPage' },
+    // { title: 'Login', component: 'LoginPage' },
+    // { title: 'Signup', component: 'SignupPage' },
     { title: 'Contacts', component: 'ListMasterPage' },
-    { title: 'Menu', component: 'MenuPage' },
-    { title: 'Settings', component: 'SettingsPage' },
-    { title: 'Search', component: 'SearchPage' },
+    // { title: 'Menu', component: 'MenuPage' },
+    // { title: 'Settings', component: 'SettingsPage' },
+    // { title: 'Search', component: 'SearchPage' },
     { title: 'Géolocalisation', component: 'GeoPage'},
     { title: 'Satisfaction', component: 'SatisfactionPage'},
+    { title: 'Caméra', component: 'CameraPage'},
   ];
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
