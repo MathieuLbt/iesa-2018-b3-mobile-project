@@ -21,6 +21,16 @@
         <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
       </ion-item>
 
+
+
+      <ion-item>
+        <ion-select interface="popover">
+        <ion-label fixed>WAREHOUSE</ion-label>
+          <ion-option value="test">TEST</ion-option>
+          <ion-option value="test">TEST</ion-option>
+        </ion-select>
+      </ion-item>
+
       <!--
       Want to add a Username? Here you go:
 
@@ -33,6 +43,11 @@
       <ion-item>
         <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
         <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'CONFIRM_PASS' | translate }}</ion-label>
+        <ion-input type="confirm_pass" [(ngModel)]="account.confirm_pass" name="confirm_pass"></ion-input>
       </ion-item>
 
       <div padding>

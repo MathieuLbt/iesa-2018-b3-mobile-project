@@ -1,7 +1,9 @@
 {
   "NAME": "Nom",
   "PASSWORD": "Mot de passe",
+  "CONFIRM_PASS": "Confirmer mot de passe",
   "EMAIL": "E-mail",
+  "WAREHOUSE": "Warehouse",
   "LOGIN": "Connexion",
   "SIGNUP": "Inscription",
 

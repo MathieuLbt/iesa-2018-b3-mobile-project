@@ -14,13 +14,13 @@ import { Settings } from '../providers';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage = FirstRunPage;
+  rootPage = "WelcomePage";
 
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
     // { title: 'Tutorial', component: 'TutorialPage' },
-    { title: 'Welcome', component: 'WelcomePage' },
+    { title: 'Accueil', component: 'WelcomePage' },
     // { title: 'Tabs', component: 'TabsPage' },
     // { title: 'Cards', component: 'CardsPage' },
     // { title: 'Maps', component: 'ContentPage' },

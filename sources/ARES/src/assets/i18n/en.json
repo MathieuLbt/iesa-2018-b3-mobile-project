@@ -4,6 +4,8 @@
   "NAME": "Name",
   "EMAIL": "Email",
   "USERNAME": "Username",
+  "CONFIRM_PASS": "CONFIRM_PASS",
+  "WAREHOUSE": "Warehouse",
   "PASSWORD": "Password",
   "LOGIN": "Sign in",
   "SIGNUP": "Sign up",
