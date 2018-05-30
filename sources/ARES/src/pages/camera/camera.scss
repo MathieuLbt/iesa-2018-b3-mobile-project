@@ -18,5 +18,18 @@ page-camera {
   .card-md{
     background-color: #f08200;
   }
+  .block{
+    position: relative;
+    .removePhoto{
+      position: absolute;
+      margin-left: 85%;
+      margin-top: 5px;
+      color: #ffffff;
+    }
+    #filter{
+      background-color: rgba(0, 128, 0, .2);
+    }
+  }
 }
+
 

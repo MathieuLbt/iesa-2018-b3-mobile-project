@@ -15,18 +15,35 @@
 
 
 <ion-content class="home">
-  <ion-card>
-    <ion-card-content>
-      Prenez votre photo pour valider ton Audit !
+  <p>Prends en photo le travail réalisé !</p>
 
-      <button ion-button (click)="takePhoto()">Prendre photo!</button>
+  <button ion-button full (click)="takePhoto()">
+    <ion-icon name="camera"></ion-icon>&nbsp;&nbsp;
+    Prendre une photo
+  </button>
 
-      <p><img src="{{ myphoto }}"></p>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6="align-self-center" *ngFor="let myphoto of myphotos; let id = index">
+
+        <ion-card class="block">
+          <ion-icon class="removePhoto" name="trash" (click)="removePhoto(id)"></ion-icon>
+          <img [src]="myphoto" *ngIf="myphoto" id="filter">
 
 
-      <!--Latest Picture:-->
-      <!--<img [src]="base64Image" *ngIf="base64Image" />-->
-    </ion-card-content>
-  </ion-card>
+
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
+
+
+<!--<button  ion-button icon-left color="danger">-->
+  <!---->
+  <!--Annulation-->
+<!--</button>-->
+<!--<img [src]="base64Image" *ngIf="base64Image" />-->
 
