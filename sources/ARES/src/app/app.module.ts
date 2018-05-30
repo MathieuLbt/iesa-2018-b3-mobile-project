@@ -19,7 +19,6 @@ import {EmailComposer} from "@ionic-native/email-composer";
 import { GoogleMaps } from '@ionic-native/google-maps';
 import {CameraPageModule} from "../pages/camera/camera.module";
 
-
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {

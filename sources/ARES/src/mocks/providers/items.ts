@@ -2,10 +2,11 @@ import { Injectable } from '@angular/core';
 
 import { Item } from '../../models/item';
 
+import { Storage } from '@ionic/storage';
+
 @Injectable()
 export class Items {
   items: Item[] = [];
-
   defaultItem: any = {
     "name": "Burt Bear",
     "profilePic": "assets/img/speakers/bear.jpg",
@@ -13,8 +14,16 @@ export class Items {
   };
 
 
-  constructor() {
-    let items = [
+  constructor(private storage: Storage) {
+    this.storage.get('items').then((val) => {
+      if (val != null) {
+        for (let item of val) {
+          this.items.push(new Item(item));
+        }
+      }
+      console.log(val)
+    });
+    /*let items = [
       {
         "name": "Burt Bear",
         "profilePic": "assets/img/speakers/bear.jpg",
@@ -50,11 +59,8 @@ export class Items {
         "profilePic": "assets/img/speakers/puppy.jpg",
         "about": "Paul is a Puppy."
       }
-    ];
+    ];*/
 
-    for (let item of items) {
-      this.items.push(new Item(item));
-    }
   }
 
   query(params?: any) {
@@ -77,9 +83,22 @@ export class Items {
 
   add(item: Item) {
     this.items.push(item);
-  }
+    this.storage.get('items').then((val) => {
+      let ret;
+    if (val === null) {
+      ret = [];
+    } else {ret = val;}
+    ret.push(item);
+    this.storage.set('items', ret);
+      });
+    }
 
   delete(item: Item) {
     this.items.splice(this.items.indexOf(item), 1);
+    this.storage.get('items').then((val) => {
+      let ret = val;
+      ret.splice(this.items.indexOf(item), 1);
+      this.storage.set('items', ret);
+    });
   }
 }
