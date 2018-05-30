@@ -14,3 +14,63 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.content-md{
+  color: #eee;
+  background-color: #fbc000;
+}
+.item-input .label-md, .item-select .label-md, .item-datetime .label-md{
+  color: #eee;
+}
+.button-md{
+  background-color: #1e82be;
+}
+.button-md-primary {
+  background-color: #1e82be;
+}
+.item-md {
+  color: #eee;
+  background-color: #fbc000;
+}
+.scroll-content{
+  background-color: #fbc000;
+}
+.list-md .item-block .item-inner {
+  border-bottom: 1px solid #eee;
+}
+.item-md.item-block .item-inner {
+  border-bottom: 1px solid #eee;
+}
+.item-input .label-md, .item-select .label-md, .item-datetime .label-md {
+  color: #eee;
+}
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+  border-bottom-color: #eee;
+}
+.list-md .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child,
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child {
+  border-bottom-color: #eee;
+}
+.select-md .select-icon .select-icon-inner{
+  color: #eee;
+}
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+  box-shadow: inset 0 -1px 0 0 #eee;
+}
+.scroll-content{
+  color: #eee;
+  background-color: #fbc000;
+}
+.content-md {
+  color: #eee;
+  background-color: #fbc000;
+}
+.item-input .label-md, .item-select .label-md, .item-datetime .label-md {
+  color: #eee;
+}
+.card-md{
+  background-color: #f08200;
+}
+.list-md .item-block .item-inner{
+  border-bottom: 1px solid #eee;
+}
