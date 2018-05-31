@@ -27,7 +27,7 @@ Application à destination des employés en charge de réaliser certaines tâche
 **Liens:** 
 - Maquettes: <https://xd.adobe.com/view/eefce19d-dbd3-46e3-b50d-bddcc745d78c/screen/5ffa1959-bf68-4f00-8cfa-03ac0994dcc7/iPad-1?fullscreen>
 
-- Video Gamification: <https://drive.google.com/open?id=1qcZ2P3JJ_4KjJlSojHJ34tw40YHMtbPW>
+- Video Gamification: <https://drive.google.com/file/d/1gQRxYMWgMfvAVaZ4-lbFlmGQ1yGgu512/view>
 
 **Plugins à installer avant de lancer le projet**
 
