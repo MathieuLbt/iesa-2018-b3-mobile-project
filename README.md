@@ -29,7 +29,7 @@ Application à destination des employés en charge de réaliser certaines tâche
 
 - Video Gamification: <https://drive.google.com/open?id=1qcZ2P3JJ_4KjJlSojHJ34tw40YHMtbPW>
 
-**PLugins à installer avant de lancer le projet**
+**Plugins à installer avant de lancer le projet**
 
 - Storage : https://ionicframework.com/docs/storage/
 - Camera : https://ionicframework.com/docs/native/camera/
