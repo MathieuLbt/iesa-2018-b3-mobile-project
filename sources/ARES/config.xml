@@ -91,8 +91,11 @@
         <variable name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="This app wants to get your location always, even this app runs in background." />
     </plugin>
     <plugin name="cordova-plugin-camera" spec="^4.0.3" />
-    <engine name="ios" spec="4.5.4" />
-    <engine name="browser" spec="5.0.3" />
     <plugin name="cordova-sqlite-storage" spec="^2.3.2" />
+<<<<<<< HEAD
     <plugin name="cordova-plugin-statusbar" spec="^2.4.2" />
+=======
+    <engine name="browser" spec="~5.0.3" />
+    <engine name="ios" spec="~4.5.4" />
+>>>>>>> 8c6fd8453b9cff25c6cddbf686383f96b10e9cf7
 </widget>
