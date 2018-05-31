@@ -24,10 +24,10 @@
 
 
       <ion-item>
-        <ion-select interface="popover">
-        <ion-label fixed>WAREHOUSE</ion-label>
-          <ion-option value="test">TEST</ion-option>
-          <ion-option value="test">TEST</ion-option>
+        <ion-select interface="popover" [(ngModel)]="account.warehouse" name="warehouse">
+        <ion-label>{{ 'WAREHOUSE' | translate }}</ion-label>
+          <ion-option value="entrepot1">Entrepôt1</ion-option>
+          <ion-option value="entrepot">Entrepôt2</ion-option>
         </ion-select>
       </ion-item>
 
