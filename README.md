@@ -29,6 +29,8 @@ Application à destination des employés en charge de réaliser certaines tâche
 
 - Video Gamification: <https://drive.google.com/file/d/1gQRxYMWgMfvAVaZ4-lbFlmGQ1yGgu512/view>
 
+- Report(PDF): <https://github.com/MathieuLbt/iesa-2018-b3-mobile-project/blob/master/report/report.pdf>
+
 **Plugins à installer avant de lancer le projet**
 
 - Storage : https://ionicframework.com/docs/storage/
