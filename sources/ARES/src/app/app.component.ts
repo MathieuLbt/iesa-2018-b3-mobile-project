@@ -7,7 +7,6 @@ import { Config, Nav, Platform } from 'ionic-angular';
 // import { SatisfactionPage } from '../pages/satisfaction/satisfaction';
 // import { CameraPage } from '../pages/camera/camera';
 
-import { FirstRunPage } from '../pages';
 import { Settings } from '../providers';
 
 @Component({

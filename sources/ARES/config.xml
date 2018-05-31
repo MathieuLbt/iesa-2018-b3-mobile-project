@@ -85,13 +85,17 @@
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="To locate you" />
     </plugin>
     <plugin name="cordova-plugin-email-composer" spec="^0.8.15" />
-    <plugin name="cordova-plugin-googlemaps" spec="^2.3.4">
+    <plugin name="cordova-plugin-camera" spec="^4.0.3" />
+    <plugin name="cordova-sqlite-storage" spec="^2.3.2" />
+    <plugin name="cordova-plugin-googlemaps" spec="^2.3.5">
+        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyDtwp7UiXxFOOBJOhh4E6Go1Gu8JRmfG58" />
         <variable name="API_KEY_FOR_IOS" value="AIzaSyDtwp7UiXxFOOBJOhh4E6Go1Gu8JRmfG58" />
+        <variable name="PLAY_SERVICES_VERSION" value="15.0.1" />
+        <variable name="ANDROID_SUPPORT_V4_VERSION" value="26.1.0" />
         <variable name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="This app wants to get your location while this app runs only." />
         <variable name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="This app wants to get your location always, even this app runs in background." />
     </plugin>
-    <plugin name="cordova-plugin-camera" spec="^4.0.3" />
-    <plugin name="cordova-sqlite-storage" spec="^2.3.2" />
-    <engine name="browser" spec="~5.0.3" />
-    <engine name="ios" spec="~4.5.4" />
+    <engine name="ios" spec="4.5.4" />
+    <engine name="browser" spec="5.0.3" />
+    <engine name="android" spec="7.0.0" />
 </widget>
